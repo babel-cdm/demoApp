@@ -31,7 +31,7 @@ Comprobaremos el valor introudcido por el usuario en el `EditText` y si ha activ
 String textoIntroducido = input.getText().
 boolean checked = swt.isChecked();
 
-##SecondActivity##
+## SecondActivity ##
 
 Una vez tengamos los valores se los pasaremos a `SecondActivity` (la segunda pantalla) a través de un `Intent`:
 
@@ -39,7 +39,7 @@ Intent intent = new Intent(MainActivity.this, SecondActivity.class); intent.putE
 
 Una vez en `SecondActivity`, leeremos los valores recibimos y mostraremos en un `TextView` el texto introducido por el usuario. Además dependiendo si el `Switch` estaba activado o no, mostraremos u ocultaremos un `ImageView`
 
-boolean swt = getIntent().getBooleanExtra("SWT", false);
+`boolean swt = getIntent().getBooleanExtra("SWT", false);
 String txt = getIntent().getStringExtra("TXT");
 
 if (swt) {
@@ -47,8 +47,7 @@ img.setVisibility(View.VISIBLE);
 } else {
 img.setVisibility(View.GONE);
 }
-
-tView.setText(txt);
+tView.setText(txt);`
 
 >  **Nota:** Es importante acordarnos que para acceder a las vistas
 > creadas en los ficheros **Layout.xml** debemos hacerlo utilizando el
